@@ -1,10 +1,8 @@
-from typing import Any
-
-
 class Employee:
 
-    def __init__(self, name):
+    def __init__(self, name, salary):
         self.name = name 
+        self.salary = salary
 
     def __len__(self):
         i = 0 
@@ -13,16 +11,16 @@ class Employee:
         return i  
 
     def __str__(self):
-        return f"The name of the employee is {self.name}"
+        return f"Employee {self.name} earns {self.salary}"
     
     def __repr__(self):
-        return f"Employee('{self.name}')"
+        return f"Employee(name={self.name!r}, salary={self.salary!r})"
     
     def __call__(self):
         print("Hey I am good")
 
     
-e1 = Employee('Harry')
+e1 = Employee('Harry', 4200)
 print(len(e1))
 # print(e1.__len__()) # the above is the same as this one 
 
